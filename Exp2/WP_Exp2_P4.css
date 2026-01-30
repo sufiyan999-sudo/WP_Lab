@@ -1,0 +1,42 @@
+/* Page background */
+body {
+    background-color: #f4f4f4;
+}
+
+/* Container for boxes */
+.color-grid {
+    display: flex;
+    gap: 15px;
+    padding: 40px;
+}
+
+/* Common box styling */
+.color-box {
+    width: 100px;
+    height: 100px;
+}
+
+/* Hexadecimal color */
+.color1 {
+    background-color: #ff5733;
+}
+
+/* RGB color */
+.color2 {
+    background-color: rgb(52, 152, 219);
+}
+
+/* Predefined (word) color */
+.color3 {
+    background-color: green;
+}
+
+/* HSL color */
+.color4 {
+    background-color: hsl(280, 70%, 60%);
+}
+
+/* Any valid color */
+.color5 {
+    background-color: teal;
+}

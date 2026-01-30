@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Job Application Form</title>
+    <link rel="stylesheet" href="WP_Exp2_P3.css">
+</head>
+<body>
+
+    <div class="container">
+        <form>
+
+            <label for="name">Full Name</label><br>
+            <input type="text" id="name" name="name" required><br><br>
+
+            <label for="email">Email Address</label><br>
+            <input type="email" id="email" name="email" required><br><br>
+
+            <label for="position">Job Position</label><br>
+            <select id="position" name="position" required>
+                <option value="">Select Position</option>
+                <option value="developer">Developer</option>
+                <option value="designer">Designer</option>
+                <option value="tester">Tester</option>
+            </select><br><br>
+
+            <fieldset class="radio-group">
+                <legend>Availability</legend>
+
+                <input type="radio" id="fulltime" name="availability">
+                <label for="fulltime">Full-Time</label><br>
+
+                <input type="radio" id="parttime" name="availability">
+                <label for="parttime">Part-Time</label>
+            </fieldset><br>
+
+            <label for="message">Message</label><br>
+            <textarea id="message" name="message" required></textarea><br><br>
+
+            <button type="submit">Submit</button>
+
+        </form>
+    </div>
+
+</body>
+</html>

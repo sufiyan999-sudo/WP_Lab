@@ -1,0 +1,38 @@
+/* Remove underline from all links */
+a {
+    text-decoration: none;
+}
+
+/* Unvisited links */
+a:link {
+    color: blue;
+}
+
+/* Visited links */
+a:visited {
+    color: purple;
+}
+
+/* Hover effect */
+a:hover {
+    color: green;
+}
+
+/* Focus effect */
+a:focus {
+    outline: 2px solid orange;
+}
+
+/* Active (clicked) link */
+a:active {
+    color: red;
+}
+
+/* Basic spacing */
+.todo-list {
+    list-style-type: none;
+}
+
+.sub-item {
+    list-style-type: circle;
+}

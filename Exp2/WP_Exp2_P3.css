@@ -1,0 +1,50 @@
+.container {
+    width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    border: 2px solid #333;
+    font-family: Arial, sans-serif;
+}
+
+/* Focus effect */
+input:focus,
+select:focus,
+textarea:focus {
+    border: 2px solid blue;
+}
+
+/* Invalid input */
+input:invalid,
+select:invalid,
+textarea:invalid {
+    border: 2px solid red;
+}
+
+/* Valid input */
+input:valid,
+select:valid,
+textarea:valid {
+    border: 2px solid green;
+}
+
+/* Hover effect on button */
+button:hover {
+    background-color: lightgreen;
+}
+
+/* Radio button checked styling */
+.radio-group input[type="radio"]:checked {
+    outline: 2px solid green;
+    background-color: lightgreen;
+    box-shadow: 0 0 5px green;
+}
+
+/* Change label color when radio selected */
+.radio-group input[type="radio"]:checked + label {
+    color: green;
+}
+
+/* Style first input differently */
+input:first-of-type {
+    border-radius: 8px;
+}
