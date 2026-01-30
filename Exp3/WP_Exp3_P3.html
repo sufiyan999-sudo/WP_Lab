@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python Technical Documentation</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f5f5;
+        }
+
+        #navbar {
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 280px;
+            height: 100vh;
+            background-color: #2c3e50;
+            color: white;
+            overflow-y: auto;
+            box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+            z-index: 1000;
+        }
+
+        #navbar header {
+            padding: 30px 20px;
+            background-color: #1a252f;
+            border-bottom: 3px solid #3498db;
+        }
+
+        #navbar header h1 {
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+
+        .nav-link {
+            display: block;
+            padding: 15px 20px;
+            color: #ecf0f1;
+            text-decoration: none;
+            border-bottom: 1px solid #34495e;
+            transition: all 0.3s ease;
+        }
+
+        .nav-link:hover {
+            background-color: #34495e;
+            padding-left: 30px;
+            color: #3498db;
+        }
+
+        #main-doc {
+            margin-left: 280px;
+            padding: 40px 50px;
+            max-width: 1000px;
+        }
+
+        .main-section {
+            background-color: white;
+            padding: 30px;
+            margin-bottom: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .main-section header {
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #3498db;
+        }
+
+        .main-section header h2 {
+            font-size: 1.8rem;
+            color: #2c3e50;
+        }
+
+        p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+
+        code {
+            background-color: #f4f4f4;
+            padding: 3px 8px;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+            color: #e74c3c;
+            border: 1px solid #ddd;
+        }
+
+        pre {
+            background-color: #2c3e50;
+            color: #ecf0f1;
+            padding: 20px;
+            border-radius: 5px;
+            overflow-x: auto;
+            margin: 20px 0;
+        }
+
+        pre code {
+            background-color: transparent;
+            border: none;
+            color: #ecf0f1;
+            padding: 0;
+        }
+
+        ul {
+            margin: 20px 0 20px 40px;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        /* Media Query for tablets and mobile devices */
+        @media (max-width: 768px) {
+            #navbar {
+                position: relative;
+                width: 100%;
+                height: auto;
+                max-height: 300px;
+            }
+
+            #main-doc {
+                margin-left: 0;
+                padding: 20px;
+            }
+
+            #navbar header h1 {
+                font-size: 1.2rem;
+            }
+
+            .main-section {
+                padding: 20px;
+            }
+
+            .main-section header h2 {
+                font-size: 1.4rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav id="navbar">
+        <header>
+            <h1>Python Documentation</h1>
+        </header>
+        <a href="#Introduction" class="nav-link">Introduction</a>
+        <a href="#Getting_Started" class="nav-link">Getting Started</a>
+        <a href="#Variables_and_Data_Types" class="nav-link">Variables and Data Types</a>
+        <a href="#Control_Flow" class="nav-link">Control Flow</a>
+        <a href="#Functions" class="nav-link">Functions</a>
+        <a href="#Lists_and_Dictionaries" class="nav-link">Lists and Dictionaries</a>
+    </nav>
+
+    <main id="main-doc">
+        <section class="main-section" id="Introduction">
+            <header>
+                <h2>Introduction</h2>
+            </header>
+            <p>Python is a high-level, interpreted programming language known for its simplicity and readability. Created by Guido van Rossum and first released in 1991, Python has become one of the most popular programming languages in the world.</p>
+            <p>Python's design philosophy emphasizes code readability with its notable use of significant whitespace. Its language constructs and object-oriented approach aim to help programmers write clear, logical code for small and large-scale projects.</p>
+            <p>Python is dynamically typed and garbage-collected. It supports multiple programming paradigms, including structured, object-oriented, and functional programming. Python is often described as a "batteries included" language due to its comprehensive standard library.</p>
+            <ul>
+                <li>Easy to learn and use</li>
+                <li>Extensive standard library and third-party packages</li>
+                <li>Cross-platform compatibility</li>
+            </ul>
+        </section>
+
+        <section class="main-section" id="Getting_Started">
+            <header>
+                <h2>Getting Started</h2>
+            </header>
+            <p>To start programming in Python, you first need to install Python on your computer. You can download the latest version from the official Python website at python.org. Python is available for Windows, macOS, and Linux operating systems.</p>
+            <p>Once installed, you can verify your installation by opening a command prompt or terminal and typing <code>python --version</code>. This will display the installed Python version.</p>
+            <p>Your first Python program is traditionally a "Hello World" script. Here's how you can create one:</p>
+            <pre><code>print("Hello, World!")</code></pre>
+            <p>You can run this program by saving it to a file with a <code>.py</code> extension and executing it with the command <code>python filename.py</code>.</p>
+        </section>
+
+        <section class="main-section" id="Variables_and_Data_Types">
+            <header>
+                <h2>Variables and Data Types</h2>
+            </header>
+            <p>In Python, variables are created when you assign a value to them. You don't need to declare the variable type explicitly, as Python is dynamically typed. The interpreter automatically determines the type based on the value assigned.</p>
+            <p>Here are some common data types in Python:</p>
+            <ul>
+                <li><strong>Integers:</strong> Whole numbers like <code>42</code> or <code>-17</code></li>
+                <li><strong>Floats:</strong> Decimal numbers like <code>3.14</code> or <code>-0.5</code></li>
+                <li><strong>Strings:</strong> Text data enclosed in quotes like <code>"Hello"</code> or <code>'World'</code></li>
+                <li><strong>Booleans:</strong> True or False values</li>
+            </ul>
+            <pre><code>name = "Alice"
+age = 30
+height = 5.6
+is_student = False</code></pre>
+        </section>
+
+        <section class="main-section" id="Control_Flow">
+            <header>
+                <h2>Control Flow</h2>
+            </header>
+            <p>Control flow statements allow you to control the execution of your code based on certain conditions. Python uses indentation to define code blocks, which makes the code more readable.</p>
+            <p>The <code>if</code> statement is used for conditional execution. Here's an example:</p>
+            <pre><code>if age >= 18:
+    print("You are an adult")
+elif age >= 13:
+    print("You are a teenager")
+else:
+    print("You are a child")</code></pre>
+            <p>Python also provides loop statements like <code>for</code> and <code>while</code> for repetitive tasks. The for loop is commonly used to iterate over sequences:</p>
+            <pre><code>for i in range(5):
+    print(i)</code></pre>
+        </section>
+
+        <section class="main-section" id="Functions">
+            <header>
+                <h2>Functions</h2>
+            </header>
+            <p>Functions are reusable blocks of code that perform specific tasks. In Python, you define a function using the <code>def</code> keyword, followed by the function name and parentheses.</p>
+            <p>Functions can accept parameters and return values. Here's a simple example:</p>
+            <pre><code>def greet(name):
+    return f"Hello, {name}!"
+
+message = greet("Alice")
+print(message)</code></pre>
+            <p>Functions help organize code, make it more maintainable, and allow code reuse. You can also define functions with default parameter values and variable-length argument lists.</p>
+            <ul>
+                <li>Functions improve code organization</li>
+                <li>They promote code reusability</li>
+            </ul>
+        </section>
+
+        <section class="main-section" id="Lists_and_Dictionaries">
+            <header>
+                <h2>Lists and Dictionaries</h2>
+            </header>
+            <p>Lists and dictionaries are two of the most commonly used data structures in Python. Lists are ordered collections of items that can be of any type, while dictionaries store key-value pairs.</p>
+            <p>Here's an example of a list:</p>
+            <pre><code>fruits = ["apple", "banana", "cherry"]
+fruits.append("orange")
+print(fruits[0])  # Output: apple</code></pre>
+            <p>And here's an example of a dictionary:</p>
+            <pre><code>person = {
+    "name": "Alice",
+    "age": 30,
+    "city": "New York"
+}
+print(person["name"])  # Output: Alice</code></pre>
+            <p>Both lists and dictionaries are mutable, meaning you can modify them after creation. They are essential for organizing and managing data in Python programs.</p>
+        </section>
+    </main>
+</body>
+</html>
